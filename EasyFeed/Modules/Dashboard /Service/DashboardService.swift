@@ -29,15 +29,3 @@ class DashboardService {
         })
     }
 }
-
-struct Post: Codable {
-    let userID, postID: Int
-    let body, title: String
-
-    private enum CodingKeys: String, CodingKey {
-        case userID = "userId"
-        case postID = "id"
-        case body
-        case title
-    }
-}

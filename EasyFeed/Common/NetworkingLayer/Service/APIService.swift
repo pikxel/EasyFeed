@@ -32,21 +32,21 @@ class APIService {
                             let apiResponse = try JSONDecoder().decode(endPoint.expectedResponseType!.self, from: responseData)
                              completion(true, apiResponse, nil)
                         } catch {
-                             print(error)
+                             Log.error(error)
                              completion(false, nil, APIServiceError(code: response.statusCode,
                                                                     description: HTTPResponseDescription.unableToDecode.rawValue))
                         }
                     case .failure(let networkFailureError):
-                        print(networkFailureError)
+                        Log.error(networkFailureError)
                         completion(false, nil, APIServiceError(code: response.statusCode, description: networkFailureError))
                     }
                 } else {
-                    print(HTTPResponseDescription.unableToParseURLResponse.rawValue)
+                    Log.error(HTTPResponseDescription.unableToParseURLResponse.rawValue)
                     completion(false, nil, APIServiceError(code: nil, description: HTTPResponseDescription.unableToParseURLResponse.rawValue))
                 }
            })
         } catch {
-            print(error)
+            Log.error(error)
             completion(false, nil, APIServiceError(code: nil, description: HTTPResponseDescription.unableToBuildRequest.rawValue))
         }
         self.task?.resume()

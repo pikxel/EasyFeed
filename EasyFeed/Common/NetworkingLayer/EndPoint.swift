@@ -40,7 +40,7 @@ extension EndPoint {
             do {
                 try configureURlParameters(request: &request, urlParameters: urlParameter)
             } catch {
-                print(error)
+                Log.error(error)
                 throw error
             }
         }
@@ -49,7 +49,7 @@ extension EndPoint {
             do {
                 try configureJSONParameters(request: &request, jasonParameters: jsonParameter)
             } catch {
-                print(error)
+                Log.error(error)
                 throw error
             }
         }
@@ -61,7 +61,7 @@ extension EndPoint {
         do {
             try URLParameterEncoder().encode(urlRequest: &request, with: urlParameters)
         } catch {
-            print(error)
+            Log.error(error)
           throw error
         }
     }
@@ -70,7 +70,7 @@ extension EndPoint {
        do {
            try JSONParameterEncoder().encode(urlRequest: &request, with: jasonParameters)
        } catch {
-         print(error)
+        Log.error(error)
          throw error
        }
     }

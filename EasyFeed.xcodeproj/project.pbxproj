@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9F2B51C637C1C013A230344D /* Pods_EasyFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1C28B39A541898634ADB45 /* Pods_EasyFeed.framework */; };
 		D04F0B6E2609D06400CFF16F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0B6D2609D06400CFF16F /* AppDelegate.swift */; };
-		D04F0B702609D06400CFF16F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0B6F2609D06400CFF16F /* SceneDelegate.swift */; };
 		D04F0B722609D06400CFF16F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0B712609D06400CFF16F /* DashboardViewController.swift */; };
 		D04F0B772609D06900CFF16F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D04F0B762609D06900CFF16F /* Assets.xcassets */; };
 		D04F0B7A2609D06900CFF16F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D04F0B782609D06900CFF16F /* LaunchScreen.storyboard */; };
@@ -32,6 +31,17 @@
 		D04F0BEE2609EC8D00CFF16F /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0BDF2609EC8C00CFF16F /* EndPoint.swift */; };
 		D04F0BF82609EEEE00CFF16F /* HTTPURLResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0BF72609EEEE00CFF16F /* HTTPURLResponse+Extension.swift */; };
 		D04F0BFE2609EF8500CFF16F /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0BFD2609EF8500CFF16F /* DashboardService.swift */; };
+		D0F78306260A495F0056AAB2 /* CommonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F78305260A495F0056AAB2 /* CommonTableViewController.swift */; };
+		D0F78309260A4BD00056AAB2 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F78308260A4BD00056AAB2 /* UITableView+Extension.swift */; };
+		D0F7830D260A4C390056AAB2 /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7830C260A4C390056AAB2 /* CommonTableViewCell.swift */; };
+		D0F78311260A4E610056AAB2 /* AutolayoutLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F78310260A4E610056AAB2 /* AutolayoutLight.swift */; };
+		D0F78314260A4EA50056AAB2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F78313260A4EA50056AAB2 /* Logger.swift */; };
+		D0F78319260A4F090056AAB2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F78318260A4F090056AAB2 /* Constants.swift */; };
+		D0F7831D260A54290056AAB2 /* DashboardPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7831C260A54290056AAB2 /* DashboardPostTableViewCell.swift */; };
+		D0F78326260A8A360056AAB2 /* PostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F78325260A8A360056AAB2 /* PostDataManager.swift */; };
+		D0F7832A260A8A6B0056AAB2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F78329260A8A6B0056AAB2 /* Post.swift */; };
+		D0F7832D260A8AED0056AAB2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7832C260A8AED0056AAB2 /* User.swift */; };
+		D0F78330260A8B0D0056AAB2 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7832F260A8B0D0056AAB2 /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +50,6 @@
 		6E1C28B39A541898634ADB45 /* Pods_EasyFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04F0B6A2609D06400CFF16F /* EasyFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04F0B6D2609D06400CFF16F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D04F0B6F2609D06400CFF16F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D04F0B712609D06400CFF16F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		D04F0B762609D06900CFF16F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D04F0B792609D06900CFF16F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +73,17 @@
 		D04F0BDF2609EC8C00CFF16F /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		D04F0BF72609EEEE00CFF16F /* HTTPURLResponse+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extension.swift"; sourceTree = "<group>"; };
 		D04F0BFD2609EF8500CFF16F /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
+		D0F78305260A495F0056AAB2 /* CommonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewController.swift; sourceTree = "<group>"; };
+		D0F78308260A4BD00056AAB2 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		D0F7830C260A4C390056AAB2 /* CommonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
+		D0F78310260A4E610056AAB2 /* AutolayoutLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutolayoutLight.swift; sourceTree = "<group>"; };
+		D0F78313260A4EA50056AAB2 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		D0F78318260A4F090056AAB2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D0F7831C260A54290056AAB2 /* DashboardPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPostTableViewCell.swift; sourceTree = "<group>"; };
+		D0F78325260A8A360056AAB2 /* PostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataManager.swift; sourceTree = "<group>"; };
+		D0F78329260A8A6B0056AAB2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		D0F7832C260A8AED0056AAB2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D0F7832F260A8B0D0056AAB2 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +139,6 @@
 				D04F0BC12609E22C00CFF16F /* Common */,
 				D04F0BBC2609E1BE00CFF16F /* Modules */,
 				D04F0B6D2609D06400CFF16F /* AppDelegate.swift */,
-				D04F0B6F2609D06400CFF16F /* SceneDelegate.swift */,
 				D04F0B762609D06900CFF16F /* Assets.xcassets */,
 				D04F0B782609D06900CFF16F /* LaunchScreen.storyboard */,
 				D04F0B7B2609D06900CFF16F /* Info.plist */,
@@ -149,7 +168,6 @@
 			children = (
 				D04F0BFC2609EF7600CFF16F /* Service */,
 				D04F0BC02609E1DF00CFF16F /* View */,
-				D04F0BBF2609E1DB00CFF16F /* Model */,
 				D04F0BBE2609E1D500CFF16F /* Controllers */,
 			);
 			path = "Dashboard ";
@@ -166,6 +184,9 @@
 		D04F0BBF2609E1DB00CFF16F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D0F78329260A8A6B0056AAB2 /* Post.swift */,
+				D0F7832C260A8AED0056AAB2 /* User.swift */,
+				D0F7832F260A8B0D0056AAB2 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +194,7 @@
 		D04F0BC02609E1DF00CFF16F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D0F7831C260A54290056AAB2 /* DashboardPostTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,6 +202,10 @@
 		D04F0BC12609E22C00CFF16F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D04F0BBF2609E1DB00CFF16F /* Model */,
+				D0F78328260A8A430056AAB2 /* Manager */,
+				D0F78316260A4EB00056AAB2 /* Helpers */,
+				D0F7830B260A4C2D0056AAB2 /* Views */,
 				D04F0BF62609EEDB00CFF16F /* Extenions */,
 				D04F0BCC2609EC8C00CFF16F /* NetworkingLayer */,
 				D04F0BB42609E05000CFF16F /* Coordinators */,
@@ -192,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				D04F0BC32609E24000CFF16F /* CommonViewController.swift */,
+				D0F78305260A495F0056AAB2 /* CommonTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -253,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				D04F0BF72609EEEE00CFF16F /* HTTPURLResponse+Extension.swift */,
+				D0F78308260A4BD00056AAB2 /* UITableView+Extension.swift */,
 			);
 			path = Extenions;
 			sourceTree = "<group>";
@@ -263,6 +291,32 @@
 				D04F0BFD2609EF8500CFF16F /* DashboardService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		D0F7830B260A4C2D0056AAB2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0F7830C260A4C390056AAB2 /* CommonTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D0F78316260A4EB00056AAB2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D0F78310260A4E610056AAB2 /* AutolayoutLight.swift */,
+				D0F78313260A4EA50056AAB2 /* Logger.swift */,
+				D0F78318260A4F090056AAB2 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D0F78328260A8A430056AAB2 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D0F78325260A8A360056AAB2 /* PostDataManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,13 +436,23 @@
 				D04F0BED2609EC8D00CFF16F /* APIServiceError.swift in Sources */,
 				D04F0BEC2609EC8D00CFF16F /* APIService.swift in Sources */,
 				D04F0BE92609EC8D00CFF16F /* HTTPResponseResult.swift in Sources */,
+				D0F7832D260A8AED0056AAB2 /* User.swift in Sources */,
+				D0F78314260A4EA50056AAB2 /* Logger.swift in Sources */,
+				D0F78330260A8B0D0056AAB2 /* Comment.swift in Sources */,
+				D0F7830D260A4C390056AAB2 /* CommonTableViewCell.swift in Sources */,
+				D0F78306260A495F0056AAB2 /* CommonTableViewController.swift in Sources */,
 				D04F0BE02609EC8D00CFF16F /* APIType.swift in Sources */,
+				D0F78311260A4E610056AAB2 /* AutolayoutLight.swift in Sources */,
+				D0F7832A260A8A6B0056AAB2 /* Post.swift in Sources */,
 				D04F0BB62609E05D00CFF16F /* Coordinator.swift in Sources */,
 				D04F0BFE2609EF8500CFF16F /* DashboardService.swift in Sources */,
+				D0F78319260A4F090056AAB2 /* Constants.swift in Sources */,
 				D04F0B722609D06400CFF16F /* DashboardViewController.swift in Sources */,
 				D04F0BBA2609E06C00CFF16F /* AppCoordinator.swift in Sources */,
 				D04F0BEA2609EC8D00CFF16F /* HTTPResponseDescription.swift in Sources */,
 				D04F0BC42609E24000CFF16F /* CommonViewController.swift in Sources */,
+				D0F7831D260A54290056AAB2 /* DashboardPostTableViewCell.swift in Sources */,
+				D0F78326260A8A360056AAB2 /* PostDataManager.swift in Sources */,
 				D04F0B6E2609D06400CFF16F /* AppDelegate.swift in Sources */,
 				D04F0BE72609EC8D00CFF16F /* ResponseDecoder.swift in Sources */,
 				D04F0BEE2609EC8D00CFF16F /* EndPoint.swift in Sources */,
@@ -399,7 +463,7 @@
 				D04F0BEB2609EC8D00CFF16F /* APIConfig.swift in Sources */,
 				D04F0BE62609EC8D00CFF16F /* EncoderBase.swift in Sources */,
 				D04F0BE42609EC8D00CFF16F /* EncodingError.swift in Sources */,
-				D04F0B702609D06400CFF16F /* SceneDelegate.swift in Sources */,
+				D0F78309260A4BD00056AAB2 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
