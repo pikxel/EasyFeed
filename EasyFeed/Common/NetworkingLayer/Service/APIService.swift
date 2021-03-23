@@ -33,7 +33,8 @@ class APIService {
                              completion(true, apiResponse, nil)
                         } catch {
                              print(error)
-                             completion(false, nil, APIServiceError(code: response.statusCode, description: HTTPResponseDescription.unableToDecode.rawValue))
+                             completion(false, nil, APIServiceError(code: response.statusCode,
+                                                                    description: HTTPResponseDescription.unableToDecode.rawValue))
                         }
                     case .failure(let networkFailureError):
                         print(networkFailureError)

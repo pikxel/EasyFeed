@@ -87,7 +87,7 @@ required init?(coder aDecoder: NSCoder) {
 func initalizeCustomIndicator(){
 
     messageFrame.frame = self.bounds
-    activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorView.Style.medium)
+    activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
     activityIndicator.tintColor = indicatorColor
     activityIndicator.hidesWhenStopped = true
     activityIndicator.frame = CGRect(x: self.bounds.origin.x + 6, y: 0, width: 20, height: 50)
