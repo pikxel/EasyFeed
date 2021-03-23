@@ -13,8 +13,8 @@ enum APIType {
 }
 
 extension APIType {
-    private var weatherAPIBaseURL: String {
-        return "https://api.openweathermap.org"
+    private var jsonPlaceHolderBase: String {
+        return "http://jsonplaceholder.typicode.com"
     }
 
     var baseURL: URL? {
@@ -22,7 +22,7 @@ extension APIType {
         case .weather:
             switch environment {
             case .production:
-                return URL(string: weatherAPIBaseURL)
+                return URL(string: jsonPlaceHolderBase)
             }
         }
     }

@@ -25,7 +25,7 @@ struct EndPoint<T: Decodable> {
 extension EndPoint {
     func buildRequest<T: Decodable>(from route: EndPoint<T>) throws -> URLRequest {
 
-        var endPoint = route
+        let endPoint = route
         guard let baseUrl = endPoint.api.baseURL else {
             throw EndPointError.baseURLEmpty("API base URL is empty or contains incorrect data")
         }

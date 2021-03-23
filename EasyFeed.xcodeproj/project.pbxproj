@@ -30,6 +30,7 @@
 		D04F0BED2609EC8D00CFF16F /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0BDE2609EC8C00CFF16F /* APIServiceError.swift */; };
 		D04F0BEE2609EC8D00CFF16F /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0BDF2609EC8C00CFF16F /* EndPoint.swift */; };
 		D04F0BF82609EEEE00CFF16F /* HTTPURLResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0BF72609EEEE00CFF16F /* HTTPURLResponse+Extension.swift */; };
+		D04F0BFE2609EF8500CFF16F /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0BFD2609EF8500CFF16F /* DashboardService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		D04F0BDE2609EC8C00CFF16F /* APIServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
 		D04F0BDF2609EC8C00CFF16F /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		D04F0BF72609EEEE00CFF16F /* HTTPURLResponse+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extension.swift"; sourceTree = "<group>"; };
+		D04F0BFD2609EF8500CFF16F /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		D04F0BBD2609E1C800CFF16F /* Dashboard  */ = {
 			isa = PBXGroup;
 			children = (
+				D04F0BFC2609EF7600CFF16F /* Service */,
 				D04F0BC02609E1DF00CFF16F /* View */,
 				D04F0BBF2609E1DB00CFF16F /* Model */,
 				D04F0BBE2609E1D500CFF16F /* Controllers */,
@@ -230,6 +233,14 @@
 			path = Extenions;
 			sourceTree = "<group>";
 		};
+		D04F0BFC2609EF7600CFF16F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D04F0BFD2609EF8500CFF16F /* DashboardService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -305,6 +316,7 @@
 				D04F0BE92609EC8D00CFF16F /* HTTPResponseResult.swift in Sources */,
 				D04F0BE02609EC8D00CFF16F /* APIType.swift in Sources */,
 				D04F0BB62609E05D00CFF16F /* Coordinator.swift in Sources */,
+				D04F0BFE2609EF8500CFF16F /* DashboardService.swift in Sources */,
 				D04F0B722609D06400CFF16F /* DashboardViewController.swift in Sources */,
 				D04F0BBA2609E06C00CFF16F /* AppCoordinator.swift in Sources */,
 				D04F0BEA2609EC8D00CFF16F /* HTTPResponseDescription.swift in Sources */,
