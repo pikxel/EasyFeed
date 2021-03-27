@@ -9,24 +9,66 @@ import Foundation
 import UIKit
 
 class DashboardPostTableViewCell: CommonTableViewCell {
-    // This really should not belong here, it mostly comes from the server
-    // We have this array just for our feed to look nicer 
-    private let images = ["avatar-female", "avatar-female1", "avatar-male-mask", "avatar-man"]
+    // MARK: - UI elements
+    private let postImage: UIImageView = {
+        let imagView = UIImageView()
+        imagView.layer.cornerRadius = 15
+        return imagView
+    }()
 
-    private let postImage = UIImageView()
-    private let stackView = UIStackView()
-    private let containerView = UIView()
-    private let titleLabel = UILabel()
-    private let bodyLabel = UILabel()
-    private let userNameLabel = UILabel()
-    private let moreButton = UIButton()
+    private let stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = Constants.UI.margin / 2
+        stackView.alignment = .fill
+        stackView.distribution = .equalSpacing
+        return stackView
+    }()
 
+    private let containerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = Constants.Color.white
+        view.roundedWithShadow()
+        return view
+    }()
+
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.numberOfLines = 0
+        return label
+    }()
+
+    private let bodyLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.numberOfLines = 0
+        return label
+    }()
+
+    private let userNameLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+
+    private let moreButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("See more", for: .normal)
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.backgroundColor = Constants.Color.pink
+        button.layer.cornerRadius = 7
+        return button
+    }()
+
+    // MARK: - Stored properties
     var isExpanded: Bool = false {
         didSet {
             bodyLabel.isHidden = !isExpanded
         }
     }
+    var seeMoreClicked: (() -> Void)?
 
+    // MARK: - Lifecycle
     override func setupSubviews() {
         super.setupSubviews()
         contentView.addSubview(containerView)
@@ -56,47 +98,29 @@ class DashboardPostTableViewCell: CommonTableViewCell {
         stackView.pinHorizontalSides(toSidesOfView: containerView, padding: Constants.UI.margin)
         stackView.topAnchor(equalTo: postImage.bottomAnchor, padding: Constants.UI.margin)
         stackView.pinBottomToContainer(padding: Constants.UI.margin)
+
+        moreButton.addTarget(self, action: #selector(moreClicked), for: .touchUpInside)
     }
 
     override func setupStyle() {
         super.setupStyle()
-
         selectionStyle = .none
-
-        titleLabel.numberOfLines = 0
-        bodyLabel.numberOfLines = 0
-
-        titleLabel.font = UIFont.systemFont(ofSize: 16)
-        bodyLabel.font = UIFont.systemFont(ofSize: 12)
-
-        stackView.axis = .vertical
-        stackView.spacing = Constants.UI.margin / 2
-        stackView.alignment = .fill
-        stackView.distribution = .equalSpacing
-
-        containerView.backgroundColor = UIColor.white
-        containerView.roundedWithShadow()
         backgroundColor = Constants.Color.blue
-
-        postImage.layer.cornerRadius = 15
-        postImage.image = UIImage(named: "avatar-man")
-
-        // TODO replace this
-        userNameLabel.text = "User"
-        postImage.image = UIImage(named: images.randomElement() ?? "")
-
-        moreButton.setTitle("See more", for: .normal)
-        moreButton.setTitleColor(UIColor.black, for: .normal)
-        moreButton.backgroundColor = UIColor(red: 0.79, green: 0.54, blue: 0.07, alpha: 1.00)
-        moreButton.layer.cornerRadius = 7
-    }
-
-    func setupFrom(post: Post) {
-        titleLabel.text = post.title
-        bodyLabel.text = post.body
     }
 
     override func prepareForReuse() {
         isExpanded = false
+    }
+
+    func setupFrom(post: UserPost) {
+        userNameLabel.text = post.user?.name
+        titleLabel.text = post.post.title
+        bodyLabel.text = post.post.body
+        postImage.image = UIImage(named: post.user?.image ?? "")
+    }
+
+    // MARK: - Actions
+    @objc private func moreClicked() {
+        seeMoreClicked?()
     }
 }

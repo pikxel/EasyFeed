@@ -1,18 +1,18 @@
 //
-//  DashboardService.swift
+//  UserService.swift
 //  EasyFeed
 //
-//  Created by Peter Lizak on 23/03/2021.
+//  Created by Peter Lizak on 26/03/2021.
 //
 
 import Foundation
 
-class DashboardService {
-    private let dashboardPath = "posts"
+class UsersService {
+    private let dashboardPath = "users"
 
-    func fetchPosts(completionBlock: @escaping ([Post]?, String?) -> Void) {
-        let endPoint = EndPoint<[Post]>(urlParameter: nil,
-                                         expectedResponseType: [Post].self,
+    func fetchUsers(completionBlock: @escaping ([User]?, String?) -> Void) {
+        let endPoint = EndPoint<[User]>(urlParameter: nil,
+                                         expectedResponseType: [User].self,
                                          expectedResponseCode: 200,
                                          path: dashboardPath,
                                          api: .weather)
@@ -21,7 +21,7 @@ class DashboardService {
                 completionBlock(data, nil)
             } else {
                 if error?.code == 404 {
-                    completionBlock(nil, "Somethng when wrong when fetching the dashboard posts")
+                    completionBlock(nil, "Somethng when wrong when fetching the users")
                 } else {
                     completionBlock(nil, error?.description)
                 }

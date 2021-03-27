@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9F2B51C637C1C013A230344D /* Pods_EasyFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1C28B39A541898634ADB45 /* Pods_EasyFeed.framework */; };
+		D01066E0260E84E000FA2C38 /* UserPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01066DF260E84E000FA2C38 /* UserPost.swift */; };
+		D01066E4260E86D300FA2C38 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01066E3260E86D300FA2C38 /* CommentTableViewCell.swift */; };
 		D04F0B6E2609D06400CFF16F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0B6D2609D06400CFF16F /* AppDelegate.swift */; };
 		D04F0B722609D06400CFF16F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0B712609D06400CFF16F /* DashboardViewController.swift */; };
 		D04F0B772609D06900CFF16F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D04F0B762609D06900CFF16F /* Assets.xcassets */; };
@@ -30,7 +32,12 @@
 		D04F0BED2609EC8D00CFF16F /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0BDE2609EC8C00CFF16F /* APIServiceError.swift */; };
 		D04F0BEE2609EC8D00CFF16F /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0BDF2609EC8C00CFF16F /* EndPoint.swift */; };
 		D04F0BF82609EEEE00CFF16F /* HTTPURLResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0BF72609EEEE00CFF16F /* HTTPURLResponse+Extension.swift */; };
-		D04F0BFE2609EF8500CFF16F /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0BFD2609EF8500CFF16F /* DashboardService.swift */; };
+		D04F0BFE2609EF8500CFF16F /* PostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0BFD2609EF8500CFF16F /* PostsService.swift */; };
+		D07CE461260DD35600D2E596 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07CE460260DD35600D2E596 /* PostDetailViewController.swift */; };
+		D07CE469260DD81000D2E596 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07CE468260DD81000D2E596 /* DashboardCoordinator.swift */; };
+		D07CE46C260DD82300D2E596 /* PostDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07CE46B260DD82300D2E596 /* PostDetailCoordinator.swift */; };
+		D07CE47B260E155400D2E596 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07CE47A260E155400D2E596 /* UserService.swift */; };
+		D07CE47F260E156C00D2E596 /* CommentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07CE47E260E156C00D2E596 /* CommentsService.swift */; };
 		D0F78306260A495F0056AAB2 /* CommonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F78305260A495F0056AAB2 /* CommonTableViewController.swift */; };
 		D0F78309260A4BD00056AAB2 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F78308260A4BD00056AAB2 /* UITableView+Extension.swift */; };
 		D0F7830D260A4C390056AAB2 /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7830C260A4C390056AAB2 /* CommonTableViewCell.swift */; };
@@ -38,7 +45,7 @@
 		D0F78314260A4EA50056AAB2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F78313260A4EA50056AAB2 /* Logger.swift */; };
 		D0F78319260A4F090056AAB2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F78318260A4F090056AAB2 /* Constants.swift */; };
 		D0F7831D260A54290056AAB2 /* DashboardPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7831C260A54290056AAB2 /* DashboardPostTableViewCell.swift */; };
-		D0F78326260A8A360056AAB2 /* PostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F78325260A8A360056AAB2 /* PostDataManager.swift */; };
+		D0F78326260A8A360056AAB2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F78325260A8A360056AAB2 /* DataManager.swift */; };
 		D0F7832A260A8A6B0056AAB2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F78329260A8A6B0056AAB2 /* Post.swift */; };
 		D0F7832D260A8AED0056AAB2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7832C260A8AED0056AAB2 /* User.swift */; };
 		D0F78330260A8B0D0056AAB2 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7832F260A8B0D0056AAB2 /* Comment.swift */; };
@@ -48,6 +55,8 @@
 		582913F89405FC35DFF5106A /* Pods-EasyFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFeed.release.xcconfig"; path = "Target Support Files/Pods-EasyFeed/Pods-EasyFeed.release.xcconfig"; sourceTree = "<group>"; };
 		6BFDE5A8A2E77CDD912279A0 /* Pods-EasyFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFeed.debug.xcconfig"; path = "Target Support Files/Pods-EasyFeed/Pods-EasyFeed.debug.xcconfig"; sourceTree = "<group>"; };
 		6E1C28B39A541898634ADB45 /* Pods_EasyFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D01066DF260E84E000FA2C38 /* UserPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPost.swift; sourceTree = "<group>"; };
+		D01066E3260E86D300FA2C38 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		D04F0B6A2609D06400CFF16F /* EasyFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04F0B6D2609D06400CFF16F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D04F0B712609D06400CFF16F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +81,12 @@
 		D04F0BDE2609EC8C00CFF16F /* APIServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
 		D04F0BDF2609EC8C00CFF16F /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		D04F0BF72609EEEE00CFF16F /* HTTPURLResponse+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extension.swift"; sourceTree = "<group>"; };
-		D04F0BFD2609EF8500CFF16F /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
+		D04F0BFD2609EF8500CFF16F /* PostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsService.swift; sourceTree = "<group>"; };
+		D07CE460260DD35600D2E596 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		D07CE468260DD81000D2E596 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
+		D07CE46B260DD82300D2E596 /* PostDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCoordinator.swift; sourceTree = "<group>"; };
+		D07CE47A260E155400D2E596 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		D07CE47E260E156C00D2E596 /* CommentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsService.swift; sourceTree = "<group>"; };
 		D0F78305260A495F0056AAB2 /* CommonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewController.swift; sourceTree = "<group>"; };
 		D0F78308260A4BD00056AAB2 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		D0F7830C260A4C390056AAB2 /* CommonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
@@ -80,7 +94,7 @@
 		D0F78313260A4EA50056AAB2 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		D0F78318260A4F090056AAB2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D0F7831C260A54290056AAB2 /* DashboardPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPostTableViewCell.swift; sourceTree = "<group>"; };
-		D0F78325260A8A360056AAB2 /* PostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataManager.swift; sourceTree = "<group>"; };
+		D0F78325260A8A360056AAB2 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D0F78329260A8A6B0056AAB2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D0F7832C260A8AED0056AAB2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D0F7832F260A8B0D0056AAB2 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -115,6 +129,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D01066DD260E84B700FA2C38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D01066DE260E84BA00FA2C38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D04F0B612609D06400CFF16F = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +164,7 @@
 		D04F0B6C2609D06400CFF16F /* EasyFeed */ = {
 			isa = PBXGroup;
 			children = (
+				D07CE478260E153B00D2E596 /* DataManager */,
 				D04F0BC12609E22C00CFF16F /* Common */,
 				D04F0BBC2609E1BE00CFF16F /* Modules */,
 				D04F0B6D2609D06400CFF16F /* AppDelegate.swift */,
@@ -159,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				D04F0BBD2609E1C800CFF16F /* Dashboard  */,
+				D07CE463260DD39400D2E596 /* Post detail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -166,9 +196,10 @@
 		D04F0BBD2609E1C800CFF16F /* Dashboard  */ = {
 			isa = PBXGroup;
 			children = (
-				D04F0BFC2609EF7600CFF16F /* Service */,
+				D01066DD260E84B700FA2C38 /* Model */,
 				D04F0BC02609E1DF00CFF16F /* View */,
 				D04F0BBE2609E1D500CFF16F /* Controllers */,
+				D07CE468260DD81000D2E596 /* DashboardCoordinator.swift */,
 			);
 			path = "Dashboard ";
 			sourceTree = "<group>";
@@ -187,6 +218,7 @@
 				D0F78329260A8A6B0056AAB2 /* Post.swift */,
 				D0F7832C260A8AED0056AAB2 /* User.swift */,
 				D0F7832F260A8B0D0056AAB2 /* Comment.swift */,
+				D01066DF260E84E000FA2C38 /* UserPost.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,7 +235,6 @@
 			isa = PBXGroup;
 			children = (
 				D04F0BBF2609E1DB00CFF16F /* Model */,
-				D0F78328260A8A430056AAB2 /* Manager */,
 				D0F78316260A4EB00056AAB2 /* Helpers */,
 				D0F7830B260A4C2D0056AAB2 /* Views */,
 				D04F0BF62609EEDB00CFF16F /* Extenions */,
@@ -285,12 +316,50 @@
 			path = Extenions;
 			sourceTree = "<group>";
 		};
-		D04F0BFC2609EF7600CFF16F /* Service */ = {
+		D07CE463260DD39400D2E596 /* Post detail */ = {
 			isa = PBXGroup;
 			children = (
-				D04F0BFD2609EF8500CFF16F /* DashboardService.swift */,
+				D01066DE260E84BA00FA2C38 /* Model */,
+				D07CE465260DD3AE00D2E596 /* View */,
+				D07CE464260DD3A900D2E596 /* Controllers */,
+				D07CE46B260DD82300D2E596 /* PostDetailCoordinator.swift */,
 			);
-			path = Service;
+			path = "Post detail";
+			sourceTree = "<group>";
+		};
+		D07CE464260DD3A900D2E596 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D07CE460260DD35600D2E596 /* PostDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D07CE465260DD3AE00D2E596 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D01066E3260E86D300FA2C38 /* CommentTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D07CE478260E153B00D2E596 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				D0F78325260A8A360056AAB2 /* DataManager.swift */,
+				D07CE479260E154900D2E596 /* Services */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		D07CE479260E154900D2E596 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D04F0BFD2609EF8500CFF16F /* PostsService.swift */,
+				D07CE47A260E155400D2E596 /* UserService.swift */,
+				D07CE47E260E156C00D2E596 /* CommentsService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		D0F7830B260A4C2D0056AAB2 /* Views */ = {
@@ -309,14 +378,6 @@
 				D0F78318260A4F090056AAB2 /* Constants.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		D0F78328260A8A430056AAB2 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				D0F78325260A8A360056AAB2 /* PostDataManager.swift */,
-			);
-			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,33 +497,40 @@
 				D04F0BED2609EC8D00CFF16F /* APIServiceError.swift in Sources */,
 				D04F0BEC2609EC8D00CFF16F /* APIService.swift in Sources */,
 				D04F0BE92609EC8D00CFF16F /* HTTPResponseResult.swift in Sources */,
+				D07CE46C260DD82300D2E596 /* PostDetailCoordinator.swift in Sources */,
 				D0F7832D260A8AED0056AAB2 /* User.swift in Sources */,
 				D0F78314260A4EA50056AAB2 /* Logger.swift in Sources */,
 				D0F78330260A8B0D0056AAB2 /* Comment.swift in Sources */,
 				D0F7830D260A4C390056AAB2 /* CommonTableViewCell.swift in Sources */,
 				D0F78306260A495F0056AAB2 /* CommonTableViewController.swift in Sources */,
+				D07CE469260DD81000D2E596 /* DashboardCoordinator.swift in Sources */,
 				D04F0BE02609EC8D00CFF16F /* APIType.swift in Sources */,
 				D0F78311260A4E610056AAB2 /* AutolayoutLight.swift in Sources */,
 				D0F7832A260A8A6B0056AAB2 /* Post.swift in Sources */,
 				D04F0BB62609E05D00CFF16F /* Coordinator.swift in Sources */,
-				D04F0BFE2609EF8500CFF16F /* DashboardService.swift in Sources */,
+				D04F0BFE2609EF8500CFF16F /* PostsService.swift in Sources */,
 				D0F78319260A4F090056AAB2 /* Constants.swift in Sources */,
 				D04F0B722609D06400CFF16F /* DashboardViewController.swift in Sources */,
 				D04F0BBA2609E06C00CFF16F /* AppCoordinator.swift in Sources */,
 				D04F0BEA2609EC8D00CFF16F /* HTTPResponseDescription.swift in Sources */,
+				D07CE47B260E155400D2E596 /* UserService.swift in Sources */,
 				D04F0BC42609E24000CFF16F /* CommonViewController.swift in Sources */,
 				D0F7831D260A54290056AAB2 /* DashboardPostTableViewCell.swift in Sources */,
-				D0F78326260A8A360056AAB2 /* PostDataManager.swift in Sources */,
+				D0F78326260A8A360056AAB2 /* DataManager.swift in Sources */,
 				D04F0B6E2609D06400CFF16F /* AppDelegate.swift in Sources */,
 				D04F0BE72609EC8D00CFF16F /* ResponseDecoder.swift in Sources */,
 				D04F0BEE2609EC8D00CFF16F /* EndPoint.swift in Sources */,
 				D04F0BF82609EEEE00CFF16F /* HTTPURLResponse+Extension.swift in Sources */,
+				D01066E0260E84E000FA2C38 /* UserPost.swift in Sources */,
+				D07CE461260DD35600D2E596 /* PostDetailViewController.swift in Sources */,
 				D04F0BE82609EC8D00CFF16F /* HTTPMethod.swift in Sources */,
 				D04F0BE52609EC8D00CFF16F /* JSONParameterEncoder.swift in Sources */,
 				D04F0BE32609EC8D00CFF16F /* URLParameterEncoder.swift in Sources */,
 				D04F0BEB2609EC8D00CFF16F /* APIConfig.swift in Sources */,
+				D01066E4260E86D300FA2C38 /* CommentTableViewCell.swift in Sources */,
 				D04F0BE62609EC8D00CFF16F /* EncoderBase.swift in Sources */,
 				D04F0BE42609EC8D00CFF16F /* EncodingError.swift in Sources */,
+				D07CE47F260E156C00D2E596 /* CommentsService.swift in Sources */,
 				D0F78309260A4BD00056AAB2 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

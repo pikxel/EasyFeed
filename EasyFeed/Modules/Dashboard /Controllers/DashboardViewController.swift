@@ -8,35 +8,26 @@
 import UIKit
 
 class DashboardViewController: CommonTableViewController {
-    private let dashboardService = DashboardService()
-    private var posts: [Post] = []
     private var expandedRows: [Int] = []
-
-    // TODO - Ha elmegy aludni Fanni, atcsinalni
-    private let headerView: UIView = {
-        let result = UIView()
-        let label = UILabel()
-        result.addSubview(label)
-        label.text = "My EasyFeed"
-        label.textAlignment = .center
-        label.pinHorizontalSides(toSidesOfView: result, padding: Constants.UI.margin)
-        label.pinVerticalSides(toSidesOfView: result, padding: Constants.UI.margin)
-        result.backgroundColor = UIColor.white
-        return result
-    }()
+    private let dataManager = DataManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Easy feed"
         loadData()
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = UITableView.automaticDimension
-        tableView.setTableHeaderView(headerView: headerView)
     }
 
     // MARK: - Networking
     private func loadData() {
-        dashboardService.fetchPosts { [weak self] (posts, error)  in
-            self?.posts = posts ?? []
+        dataManager.loadData { [weak self] success in
+            if !success {
+                self?.presentAlert(title: "Something went wrong",
+                                   message: "An error occured when loading the data",
+                                   options: "Try again", completion: { _ in
+                    // Weak self already captured
+                    self?.loadData()
+                })
+            }
             self?.reloadTableView()
         }
     }
@@ -44,13 +35,19 @@ class DashboardViewController: CommonTableViewController {
 
 extension DashboardViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        posts.count
+        dataManager.userPosts.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: DashboardPostTableViewCell = tableView.dequeueCell(for: indexPath)
-        cell.setupFrom(post: posts[indexPath.row])
+        cell.setupFrom(post: dataManager.userPosts[indexPath.row])
         cell.isExpanded = expandedRows.contains(indexPath.row)
+        cell.seeMoreClicked = { [weak self] in
+            guard let self = self else { return }
+            if let dashboardCoordinator = self.coordinator as? DashboardCoordinator {
+                dashboardCoordinator.startPostDetailCoordinator(userPost: self.dataManager.userPosts[indexPath.row])
+            }
+        }
         return cell
     }
 

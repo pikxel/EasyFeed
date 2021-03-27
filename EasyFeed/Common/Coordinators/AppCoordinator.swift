@@ -19,7 +19,14 @@ class AppCoordinator: Coordinator {
     }
 
     func start() {
-        let rootViewController = DashboardViewController(coordinator: self)
-        self.window.rootViewController = rootViewController
+        startDashboardCoordinator()
+    }
+
+    func startDashboardCoordinator() {
+        let dashboardCoordinator = DashboardCoordinator(rootViewController: nil, parentCoordinator: self)
+        let rootViewController = DashboardViewController(coordinator: dashboardCoordinator)
+        let navigationController = UINavigationController(rootViewController: rootViewController)
+        dashboardCoordinator.navigationController = navigationController
+        self.window.rootViewController = navigationController
     }
 }

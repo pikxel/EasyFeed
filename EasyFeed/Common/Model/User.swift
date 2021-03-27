@@ -14,10 +14,11 @@ struct User: Codable {
     let address: Address
     let phone, website: String
     let company: Company
+    var image: String? // Just a local property to show random image for the user 
 
     private enum CodingKeys: String, CodingKey {
         case userID = "id"
-        case name, username, email, address, phone, website, company
+        case name, username, email, address, phone, website, company, image
     }
 }
 
