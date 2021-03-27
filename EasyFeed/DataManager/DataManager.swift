@@ -21,9 +21,6 @@ class DataManager {
     // Be default it will load and cache the Users and Posts and Comments requests
     // NOTE: Maybe the comments request should not be called only if we navigate to the PostDetail screen
     func loadData(completion: @escaping (Bool) -> Void) {
-        postsLoaded = false
-        usersLoaded = false
-
         loadPosts { [weak self] result in
             self?.postsLoaded = true
             if self?.usersLoaded ?? false && self?.commentsLoaded ?? false {
@@ -51,7 +48,7 @@ class DataManager {
 
     // Will pair and combine the fetched data into logical objects
     // NOTE: This type of work really should be done by the backend
-    private func updateUserPosts() {
+    func updateUserPosts() {
         userPosts = []
         for post in posts {
             var user = users.first {$0.userID == post.userID }
@@ -73,14 +70,14 @@ class DataManager {
             return
         }
 
-        postsService.fetchPosts { [weak self] (posts, error) in
+        postsService.loadData(completionBlock: { [weak self] (posts, error) in
             if error == nil {
                 self?.posts = posts ?? []
                 completion(true)
             } else {
                 completion(false)
             }
-        }
+        })
     }
 
     // MARK: - User
@@ -94,7 +91,7 @@ class DataManager {
             return
         }
 
-        userService.fetchUsers { [weak self] (users, error) in
+        userService.loadData { [weak self] (users, error) in
             if error == nil {
                 self?.users = users ?? []
                 completion(true)
@@ -115,13 +112,13 @@ class DataManager {
             return
         }
 
-        commentsService.fetchComments { [weak self] (comments, error) in
+        commentsService.loadData(completionBlock: { [weak self] (comments, error) in
             if error == nil {
                 self?.comments = comments ?? []
                 completion(true)
             } else {
                 self?.users = []
             }
-        }
+        })
     }
 }

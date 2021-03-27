@@ -7,10 +7,10 @@
 
 import Foundation
 
-class UsersService {
+class UsersService: NetowrkService<[User]> {
     private let dashboardPath = "users"
 
-    func fetchUsers(completionBlock: @escaping ([User]?, String?) -> Void) {
+    override func loadData(completionBlock: @escaping ([User]?, Error?) -> Void) {
         let endPoint = EndPoint<[User]>(urlParameter: nil,
                                          expectedResponseType: [User].self,
                                          expectedResponseCode: 200,
@@ -20,11 +20,7 @@ class UsersService {
             if success {
                 completionBlock(data, nil)
             } else {
-                if error?.code == 404 {
-                    completionBlock(nil, "Somethng when wrong when fetching the users")
-                } else {
-                    completionBlock(nil, error?.description)
-                }
+                completionBlock(nil, error)
             }
         })
     }

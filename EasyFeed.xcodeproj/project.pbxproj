@@ -10,6 +10,7 @@
 		9F2B51C637C1C013A230344D /* Pods_EasyFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1C28B39A541898634ADB45 /* Pods_EasyFeed.framework */; };
 		D01066E0260E84E000FA2C38 /* UserPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01066DF260E84E000FA2C38 /* UserPost.swift */; };
 		D01066E4260E86D300FA2C38 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01066E3260E86D300FA2C38 /* CommentTableViewCell.swift */; };
+		D01066ED260F214400FA2C38 /* EasyFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01066EC260F214400FA2C38 /* EasyFeedTests.swift */; };
 		D04F0B6E2609D06400CFF16F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0B6D2609D06400CFF16F /* AppDelegate.swift */; };
 		D04F0B722609D06400CFF16F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04F0B712609D06400CFF16F /* DashboardViewController.swift */; };
 		D04F0B772609D06900CFF16F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D04F0B762609D06900CFF16F /* Assets.xcassets */; };
@@ -51,12 +52,25 @@
 		D0F78330260A8B0D0056AAB2 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7832F260A8B0D0056AAB2 /* Comment.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D01066EF260F214400FA2C38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D04F0B622609D06400CFF16F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D04F0B692609D06400CFF16F;
+			remoteInfo = EasyFeed;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		582913F89405FC35DFF5106A /* Pods-EasyFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFeed.release.xcconfig"; path = "Target Support Files/Pods-EasyFeed/Pods-EasyFeed.release.xcconfig"; sourceTree = "<group>"; };
 		6BFDE5A8A2E77CDD912279A0 /* Pods-EasyFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyFeed.debug.xcconfig"; path = "Target Support Files/Pods-EasyFeed/Pods-EasyFeed.debug.xcconfig"; sourceTree = "<group>"; };
 		6E1C28B39A541898634ADB45 /* Pods_EasyFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01066DF260E84E000FA2C38 /* UserPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPost.swift; sourceTree = "<group>"; };
 		D01066E3260E86D300FA2C38 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		D01066EA260F214400FA2C38 /* EasyFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D01066EC260F214400FA2C38 /* EasyFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyFeedTests.swift; sourceTree = "<group>"; };
+		D01066EE260F214400FA2C38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D04F0B6A2609D06400CFF16F /* EasyFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04F0B6D2609D06400CFF16F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D04F0B712609D06400CFF16F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +115,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D01066E7260F214400FA2C38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D04F0B672609D06400CFF16F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,10 +164,20 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D01066EB260F214400FA2C38 /* EasyFeedTests */ = {
+			isa = PBXGroup;
+			children = (
+				D01066EC260F214400FA2C38 /* EasyFeedTests.swift */,
+				D01066EE260F214400FA2C38 /* Info.plist */,
+			);
+			path = EasyFeedTests;
+			sourceTree = "<group>";
+		};
 		D04F0B612609D06400CFF16F = {
 			isa = PBXGroup;
 			children = (
 				D04F0B6C2609D06400CFF16F /* EasyFeed */,
+				D01066EB260F214400FA2C38 /* EasyFeedTests */,
 				D04F0B6B2609D06400CFF16F /* Products */,
 				98D0D1217EDF05A35290BEC7 /* Pods */,
 				7C08C01740DE6CDD1F7A5DCE /* Frameworks */,
@@ -157,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				D04F0B6A2609D06400CFF16F /* EasyFeed.app */,
+				D01066EA260F214400FA2C38 /* EasyFeedTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -383,6 +415,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D01066E9260F214400FA2C38 /* EasyFeedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D01066F1260F214400FA2C38 /* Build configuration list for PBXNativeTarget "EasyFeedTests" */;
+			buildPhases = (
+				D01066E6260F214400FA2C38 /* Sources */,
+				D01066E7260F214400FA2C38 /* Frameworks */,
+				D01066E8260F214400FA2C38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D01066F0260F214400FA2C38 /* PBXTargetDependency */,
+			);
+			name = EasyFeedTests;
+			productName = EasyFeedTests;
+			productReference = D01066EA260F214400FA2C38 /* EasyFeedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D04F0B692609D06400CFF16F /* EasyFeed */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D04F0B7E2609D06900CFF16F /* Build configuration list for PBXNativeTarget "EasyFeed" */;
@@ -411,6 +461,10 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					D01066E9260F214400FA2C38 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = D04F0B692609D06400CFF16F;
+					};
 					D04F0B692609D06400CFF16F = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -430,11 +484,19 @@
 			projectRoot = "";
 			targets = (
 				D04F0B692609D06400CFF16F /* EasyFeed */,
+				D01066E9260F214400FA2C38 /* EasyFeedTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D01066E8260F214400FA2C38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D04F0B682609D06400CFF16F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -489,6 +551,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D01066E6260F214400FA2C38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D01066ED260F214400FA2C38 /* EasyFeedTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D04F0B662609D06400CFF16F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -537,6 +607,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D01066F0260F214400FA2C38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D04F0B692609D06400CFF16F /* EasyFeed */;
+			targetProxy = D01066EF260F214400FA2C38 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		D04F0B782609D06900CFF16F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -549,6 +627,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D01066F2260F214400FA2C38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62JD93G7RB;
+				INFOPLIST_FILE = EasyFeedTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = peter.lizak.EasyFeedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyFeed.app/EasyFeed";
+			};
+			name = Debug;
+		};
+		D01066F3260F214400FA2C38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62JD93G7RB;
+				INFOPLIST_FILE = EasyFeedTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = peter.lizak.EasyFeedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyFeed.app/EasyFeed";
+			};
+			name = Release;
+		};
 		D04F0B7C2609D06900CFF16F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -708,6 +826,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D01066F1260F214400FA2C38 /* Build configuration list for PBXNativeTarget "EasyFeedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D01066F2260F214400FA2C38 /* Debug */,
+				D01066F3260F214400FA2C38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D04F0B652609D06400CFF16F /* Build configuration list for PBXProject "EasyFeed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

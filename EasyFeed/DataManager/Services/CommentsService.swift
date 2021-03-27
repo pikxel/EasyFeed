@@ -7,10 +7,16 @@
 
 import Foundation
 
-class CommentsService {
+class NetowrkService<T: Codable> {
+    func loadData(completionBlock: @escaping (T?, Error?) -> Void) {
+        // To be overriden
+    }
+}
+
+class CommentsService: NetowrkService<[Comment]> {
     private let dashboardPath = "comments"
 
-    func fetchComments(completionBlock: @escaping ([Comment]?, String?) -> Void) {
+    override func loadData(completionBlock: @escaping  ([Comment]?, Error?) -> Void) {
         let endPoint = EndPoint<[Comment]>(urlParameter: nil,
                                          expectedResponseType: [Comment].self,
                                          expectedResponseCode: 200,
@@ -20,13 +26,8 @@ class CommentsService {
             if success {
                 completionBlock(data, nil)
             } else {
-                if error?.code == 404 {
-                    completionBlock(nil, "Somethng when wrong when fetching the users")
-                } else {
-                    completionBlock(nil, error?.description)
-                }
+                completionBlock(nil, error)
             }
         })
     }
 }
-

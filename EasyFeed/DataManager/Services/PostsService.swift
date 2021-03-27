@@ -7,10 +7,10 @@
 
 import Foundation
 
-class PostsService {
+class PostsService: NetowrkService<[Post]> {
     private let dashboardPath = "posts"
 
-    func fetchPosts(completionBlock: @escaping ([Post]?, String?) -> Void) {
+    override func loadData(completionBlock: @escaping ([Post]?, Error?) -> Void) {
         let endPoint = EndPoint<[Post]>(urlParameter: nil,
                                          expectedResponseType: [Post].self,
                                          expectedResponseCode: 200,
@@ -20,11 +20,7 @@ class PostsService {
             if success {
                 completionBlock(data, nil)
             } else {
-                if error?.code == 404 {
-                    completionBlock(nil, "Somethng when wrong when fetching the dashboard posts")
-                } else {
-                    completionBlock(nil, error?.description)
-                }
+                completionBlock(nil, error)
             }
         })
     }

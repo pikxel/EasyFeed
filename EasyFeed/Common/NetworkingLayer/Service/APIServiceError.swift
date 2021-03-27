@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct APIServiceError {
+struct APIServiceError: Error {
     var code: Int?
     var description: String?
 }
